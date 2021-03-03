@@ -1,4 +1,4 @@
-Deployed Link: https://laurenzel93.github.io/weather-dashboard/
+Deployed Link: https://laurenzel93.github.io/weather-dashboard/ <br>
 GitHub Page: https://github.com/Laurenzel93/weather-dashboard
 
 ## User Story
