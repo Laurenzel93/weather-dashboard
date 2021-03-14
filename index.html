@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="style.css" />
-    <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="style.css" />
+    <title>Weather Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -14,31 +16,31 @@
         <h2>Weather Dashboard</h2>
     </nav>
 
-    <form class="container column col-9">
+    <form onsubmit="search(this)" class=" container column col-9">
         <label><b>Search For A City</b></label>
         <br>
         <input type="text">
         <input type="submit">
-        <div class="recentSearch">
+        <div id="recentSearch">
         </div>
     </form>
-<br>
-    <section class="container column col-9">
-        <div class="city">City Name</div>
-        <div class="date">Date</div>
-        <div class="icon">Icon</div>
-        <div class="temperature">Temperature</div>
-        <div class="humidity">Humidity</div>
-        <div class="windSpeed">Wind Speed</div>
-        <div class="UV">UV</div>
+    <br>
+    <section id="container column col-9">
+        <div id="city">City Name</div>
+        <div id="date">Date</div>
+        <div id="icon">Icon</div>
+        <div id="temperature">Temperature</div>
+        <div id="humidity">Humidity</div>
+        <div id="windSpeed">Wind Speed</div>
+        <div id="UV">UV</div>
     </section>
 
-    <section class="container row col-9">
-        <div class="1"></div>
-        <div class="2"></div>
-        <div class="3"></div>
-        <div class="4"></div>
-        <div class="5"></div>
+    <section id="container row col-9">
+        <div id="1"></div>
+        <div id="2"></div>
+        <div id="3"></div>
+        <div id="4"></div>
+        <div id="5"></div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
