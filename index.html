@@ -16,11 +16,11 @@
         <h2>Weather Dashboard</h2>
     </nav>
 
-    <form onsubmit="search(this)" class=" container column col-9">
+    <form class=" container column col-9" id="searchForm">
         <label><b>Search For A City</b></label>
         <br>
-        <input type="text">
-        <input type="submit">
+        <input type="text" id="input">
+        <input type="submit" id="button">
         <div id="recentSearch">
         </div>
     </form>
@@ -28,7 +28,7 @@
     <section id="container column col-9">
         <div id="city">City Name</div>
         <div id="date">Date</div>
-        <div id="icon">Icon</div>
+        <div id="iconContainer"><img id="icon" src=""></div>
         <div id="temperature">Temperature</div>
         <div id="humidity">Humidity</div>
         <div id="windSpeed">Wind Speed</div>

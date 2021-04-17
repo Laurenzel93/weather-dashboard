@@ -4,7 +4,8 @@ let temperature = $('#temperature')
 let humidity = $('#humidity')
 let windSpeed = $('#windSpeed')
 let inputCity = $("#input");
-let userInput = $("")
+let userInput = $("");
+let icon = $("#icon");
 
 $(document).ready(() => {
     weatherCall(cityName);
@@ -21,6 +22,7 @@ function weatherCall(city) {
         temperature.text(`${data.main.temp}F`);
         humidity.text(`${data.main.humidity}%`);
         windSpeed.text(`${data.wind.speed} mph`);
+        icon.attr("src", "http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png")
         console.log(data);
 
         $.get(`http://api.openweathermap.org/data/2.5/uvi?lat=`+data.coord.lat+`&lon=`+data.coord.lon+`&appid=`+ apiKey, data => {
@@ -31,12 +33,12 @@ function weatherCall(city) {
     
 }
 
-function search(form) {
-    let searchInfo = form[0].value;
-    }
-    
-    weatherCall(searchInfo);
+$("#searchForm").on("submit", function(event) {
+    event.preventDefault();
+    let city = $("#input").val().trim();
+    console.log(city);
+    return weatherCall(city);
+});
+
+
    
-// localStorage.setItem("cityName", JSON.stringify)
-// search.on("click", event)
-// let search = input.val()
