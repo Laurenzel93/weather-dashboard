@@ -13,34 +13,62 @@
 
 <body>
     <nav class="row navbar text-light bg-dark justify-content-center">
-        <h2>Weather Dashboard</h2>
+        <h1>Weather Dashboard</h1>
     </nav>
 
-    <form class=" container column col-9" id="searchForm">
+    <form class=" container column col-11" id="searchForm">
         <label><b>Search For A City</b></label>
         <br>
         <input type="text" id="input">
         <input type="submit" id="button">
-        <div id="recentSearch">
-        </div>
+
+        <br>
+        <br>
+        <label><b>Your Recent Searches</b></label>
     </form>
+    <div id="previousSearches"></div>
+
     <br>
-    <section id="container column col-9">
+    <section id="container">
+        <h3>Current Weather Forecast</h3>
         <div id="city">City Name</div>
         <div id="date">Date</div>
         <div id="iconContainer"><img id="icon" src=""></div>
         <div id="temperature">Temperature</div>
         <div id="humidity">Humidity</div>
         <div id="windSpeed">Wind Speed</div>
-        <div id="UV">UV</div>
+        <div class="badge" id="UV">UV</div>
     </section>
 
-    <section id="container row col-9">
-        <div id="1"></div>
-        <div id="2"></div>
-        <div id="3"></div>
-        <div id="4"></div>
-        <div id="5"></div>
+    <section class="row border border-dark">
+        <nav class="row navbar text-light bg-primary justify-content-center">
+            <h3>Five Day Forecast</h3>
+        </nav>
+        <div class="col-sm border border-primary" id="1">
+            <p id="date1"></p>
+            <p id="temp1"></p>
+            <p id="humidity1"></p><img id="icon1">
+        </div>
+        <div class="col-sm border border-primary" id="2">
+            <p id="date2"></p>
+            <p id="temp2"></p>
+            <p id="humidity2"></p><img id="icon2">
+        </div>
+        <div class="col-sm border border-primary" id="3">
+            <p id="date3"></p>
+            <p id="temp3"></p>
+            <p id="humidity3"></p><img id="icon3">
+        </div>
+        <div class="col-sm border border-primary" id="4">
+            <p id="date4"></p>
+            <p id="temp4"></p>
+            <p id="humidity4"></p><img id="icon4">
+        </div>
+        <div class="col-sm border border-primary" id="5">
+            <p id="date5"></p>
+            <p id="temp5"></p>
+            <p id="humidity5"></p><img id="icon5">
+        </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

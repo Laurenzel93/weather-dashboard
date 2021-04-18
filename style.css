@@ -1,0 +1,17 @@
+#container {
+    padding: 40px;
+    background-color: rgb(214, 214, 223);
+    border: solid 5px rgb(61, 123, 217);
+}
+
+.row {
+    padding: 50px;
+}
+
+.col-sm {
+    background-color: rgb(214, 214, 223);
+}
+
+body {
+    background-color: rgb(156, 202, 242)
+}
