@@ -27,7 +27,7 @@ function weatherCall(city) {
 
         $.get(`http://api.openweathermap.org/data/2.5/uvi?lat=`+data.coord.lat+`&lon=`+data.coord.lon+`&appid=`+ apiKey, data => {
          console.log(data);
-         $(`#UV`).text(`UV Index: ${data.value}`);
+         $(`#UV`).text(data.value);
          if (parseInt(data.value) <= 4) {
             $("#UV").addClass("badge, badge-success")
           } else if (parseInt(data.value) >= 7) {
